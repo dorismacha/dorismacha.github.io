@@ -17,26 +17,21 @@ const Home: React.FC = () => {
               alt="Doris Edmund Macha"
             />
           </div>
-          <div className="md:w-2/3 p-4 sm:p-8 md:p-12 flex flex-col">
+          <div className="md:w-2/3 p-5 sm:p-8 md:p-12 flex flex-col">
             <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Doris Edmund Macha
             </h1>
             <div className="flex-grow max-w-none text-gray-700 dark:text-gray-300 flex flex-col gap-2 text-justify md:text-start">
-              <p className='indent-10'>
-                I hold a M.A in Economics and B.A (Hon) in Economics and Statistics from the
-                University of Dar es Salaam. I am currently a PhD candidate in Economics and
-                Public policy at Tufts University and Fletcher School of Law &amp; Diplomacy.
+              <p>
+                I hold a M.A in Economics and B.A (Honors) in Economics and Statistics from the University of Dar es Salaam, and am currently a PhD student in Economics and Public Policy at Tufts University.
               </p>
-              <p className='indent-10'>
-                Before starting grad school, I was an Assistant Lecturer at Department of Applied
-                Economics at the University of Dar es Salaam. Where I gained professional
-                experience in research and teaching on projects related to Agricultural &amp; Food,
-                Environment and Development Economics.
+              <p>
+                My doctoral program is funded by a <a target='_blank' className='text-blue-600 dark:text-blue-400 hover:underline' href='https://as.tufts.edu/economics/academics/graduate-programs/neubauer-family-program-economics-and-public-policy-phd'>Neubauer Family Fellowship</a>, with additional support from the Gates Foundation through projects on <a target='_blank' className='text-blue-600 dark:text-blue-400 hover:underline' href='https://sites.tufts.edu/dafma'>Data Analytics for Food Markets in Africa</a>, and <a target='_blank' className='text-blue-600 dark:text-blue-400 hover:underline' href="https://sites.tufts.edu/foodpricesfornutrition">Food Prices for Nutrition</a>. Before starting my doctoral program, I was an Assistant Lecturer at Department of Applied Economics at the University of Dar es Salaam,where I gained professional experience in research and teaching on projects related to agriculture, food, the environment and economic development.
               </p>
               <p>
                 My research areas of interest include:
               </p>
-              <ul className='ml-12'>
+              <ul className='ml-12 list-disc'>
                 <li>Agricultural &amp; Food Economics</li>
                 <li>Behavioral Economics</li>
                 <li>Development Economics</li>
