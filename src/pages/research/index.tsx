@@ -1,12 +1,12 @@
 import { Link } from 'react-router';
 import { ArrowRight } from 'lucide-react';
-import Layout from '../components/Layout';
+import Layout from '../../components/Layout';
 import { useEffect, useState } from 'react';
-import { Spinner } from "../components/ui/spinner";
+import { Spinner } from "../../components/ui/spinner";
 import { extractH1, removeH1, slugToTitle } from '@/lib/utils';
 import MarkdownRenderer from '@/components/MarkdownRenderer';
 
-const files = import.meta.glob("../researches/*.md", {
+const files = import.meta.glob("../../research/*.md", {
     query: "?raw",
     import: "default",
 });
@@ -17,8 +17,8 @@ type Research = {
     content: string;
 };
 
-const Researches: React.FC = () => {
-    const [researches, setResearches] = useState<Research[]>([]);
+const Research: React.FC = () => {
+    const [research, setResearch] = useState<Research[]>([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -33,7 +33,7 @@ const Researches: React.FC = () => {
                     return { slug, title, content };
                 })
             );
-            setResearches(loaded);
+            setResearch(loaded);
             setLoading(false);
         }
         loadFiles();
@@ -42,7 +42,7 @@ const Researches: React.FC = () => {
     return (
         <Layout>
             <div className="mb-8">
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Researches</h1>
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Research</h1>
                 <p className="text-gray-600 dark:text-gray-300">
                     A collection of research papers, articles, and academic work.
                 </p>
@@ -52,22 +52,22 @@ const Researches: React.FC = () => {
                 <div className="flex justify-center pt-20 pb-5">
                     <Spinner />
                 </div>
-            ) : researches.length === 0 ? (
+            ) : research.length === 0 ? (
                 <div className="text-center py-12">
-                    <p className="text-gray-600 dark:text-gray-300">No researches found.</p>
+                    <p className="text-gray-600 dark:text-gray-300">No research found.</p>
                 </div>
             ) : (
                 <div className="space-y-6">
-                    {researches.map((research) => (
+                    {research.map((research) => (
                         <article
                             key={research.slug}
-                            className="bg-sidebar rounded-xl shadow-sm border border-muted p-6 hover:shadow-md transition-shadow"
+                            className="bg-sidebar rounded-xl shadow-sm border border-muted p-5 md:p-6 hover:shadow-md transition-shadow"
                         >
                             <div className="flex items-start justify-between">
                                 <div className="flex-1">
-                                    <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                                    <h2 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
                                         <Link
-                                            to={`/researches/${research.slug}`}
+                                            to={`/research/${research.slug}`}
                                             className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                                         >
                                             {research.title}
@@ -77,7 +77,7 @@ const Researches: React.FC = () => {
                                         <MarkdownRenderer content={research.content} />
                                     </div>
                                     <Link
-                                        to={`/researches/${research.slug}`}
+                                        to={`/research/${research.slug}`}
                                         className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
                                     >
                                         Read more
@@ -93,4 +93,4 @@ const Researches: React.FC = () => {
     );
 };
 
-export default Researches;
+export default Research;

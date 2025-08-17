@@ -1,12 +1,12 @@
 import { useParams, Link } from 'react-router';
 import { ArrowLeft } from 'lucide-react';
-import Layout from '../components/Layout';
-import MarkdownRenderer from '../components/MarkdownRenderer';
+import Layout from '../../components/Layout';
+import MarkdownRenderer from '../../components/MarkdownRenderer';
 import { useEffect, useState } from 'react';
-import { Spinner } from "../components/ui/spinner";
+import { Spinner } from "../../components/ui/spinner";
 import { extractH1, removeH1, slugToTitle } from '@/lib/utils';
 
-const files = import.meta.glob("../researches/*.md", {
+const files = import.meta.glob("../../research/*.md", {
     query: "?raw",
     import: "default",
 });
@@ -21,7 +21,7 @@ const Research: React.FC = () => {
         if (!slug) return;
 
         setLoading(true);
-        const fileKey = `../researches/${slug}.md`;
+        const fileKey = `../../research/${slug}.md`;
 
         if (files[fileKey]) {
             files[fileKey]().then((md) => {
@@ -43,18 +43,18 @@ const Research: React.FC = () => {
         <Layout>
             <div className="mb-8">
                 <Link
-                    to="/researches"
+                    to="/research"
                     className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium mb-6 transition-colors"
                 >
                     <ArrowLeft className="h-4 w-4 mr-1" />
-                    Back to Researches
+                    Back to Research
                 </Link>
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                <h1 className="text-xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
                     {title || "Loading..."}
                 </h1>
             </div>
 
-            <article className="bg-sidebar rounded-xl shadow-sm border border-muted p-8">
+            <article className="bg-sidebar rounded-xl shadow-sm border border-muted p-5 sm:p-6 md:p-8">
                 {!loading ? <MarkdownRenderer content={content} /> : <div className='w-full h-40 flex flex-col items-center justify-center'><Spinner /></div>}
             </article>
         </Layout>

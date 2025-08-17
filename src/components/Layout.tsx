@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router';
-import { Home, FileText, User } from 'lucide-react';
+import { Home, FileText, User, FileUser } from 'lucide-react';
 import { buttonVariants } from './ui/button';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/useIsMobile';
@@ -21,7 +21,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="flex items-center gap-8">
               <Link to="/" className="flex items-center space-x-2 font-bold text-primary sr-only lg:not-sr-only">
                 <User className="h-6 w-6 text-primary" />
-                <span className='whitespace-nowrap'>Dr. Doris Edmund Macha</span>
+                <span className='whitespace-nowrap'>Doris Edmund Macha</span>
               </Link>
               <div className="flex space-x-2 lg:space-x-6">
                 <Link
@@ -32,11 +32,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <span>Home</span>
                 </Link>
                 <Link
-                  to="/researches"
-                  className={cn(buttonVariants({ variant: 'ghost', size: isMobile ? 'sm' : 'default' }), `${location.pathname.startsWith('/researches') ? 'text-primary bg-primary/20' : 'text-foreground'} hover:text-primary hover:bg-primary/20 active:text-primary active:bg-primary/20`)}
+                  to="/research"
+                  className={cn(buttonVariants({ variant: 'ghost', size: isMobile ? 'sm' : 'default' }), `${location.pathname.startsWith('/research') ? 'text-primary bg-primary/20' : 'text-foreground'} hover:text-primary hover:bg-primary/20 active:text-primary active:bg-primary/20`)}
                 >
                   {!isMobile && <FileText className="h-4 w-4" />}
-                  <span>Researches</span>
+                  <span>Research</span>
+                </Link>
+                <Link
+                  to="/curriculum-vitae"
+                  className={cn(buttonVariants({ variant: 'ghost', size: isMobile ? 'sm' : 'default' }), `${location.pathname.startsWith('/curriculum-vitae') ? 'text-primary bg-primary/20' : 'text-foreground'} hover:text-primary hover:bg-primary/20 active:text-primary active:bg-primary/20`)}
+                >
+                  {!isMobile && <FileUser className="h-4 w-4" />}
+                  <span className='md:hidden'>CV</span>
+                  <span className='hidden md:block'>Curriculum Vitae</span>
                 </Link>
               </div>
             </div>
