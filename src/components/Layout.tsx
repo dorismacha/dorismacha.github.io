@@ -32,11 +32,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <span>Home</span>
                 </Link>
                 <Link
-                  to="/publications"
-                  className={cn(buttonVariants({ variant: 'ghost', size: isMobile ? 'sm' : 'default' }), `${location.pathname === '/publications' ? 'text-primary bg-primary/20' : 'text-foreground'} hover:text-primary hover:bg-primary/20 active:text-primary active:bg-primary/20`)}
+                  to="/researches"
+                  className={cn(buttonVariants({ variant: 'ghost', size: isMobile ? 'sm' : 'default' }), `${location.pathname.startsWith('/researches') ? 'text-primary bg-primary/20' : 'text-foreground'} hover:text-primary hover:bg-primary/20 active:text-primary active:bg-primary/20`)}
                 >
                   {!isMobile && <FileText className="h-4 w-4" />}
-                  <span>Publications</span>
+                  <span>Researches</span>
                 </Link>
               </div>
             </div>
