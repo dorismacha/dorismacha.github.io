@@ -7,9 +7,9 @@ import GoogleScholar from "../assets/google-scholar.png"
 const Home: React.FC = () => {
   return (
     <Layout>
-      <div className="bg-sidebar rounded-xl shadow-sm border border-muted overflow-hidden">
-        <div className="md:flex">
-          <div className="h-[25rem] sm:h-[40rem] md:h-auto w-full md:w-1/3">
+      <div className="bg-sidebar rounded-xl shadow-sm border border-muted overflow-hidden max-w-xl lg:max-w-7xl mx-auto">
+        <div className="lg:flex">
+          <div className="h-[25rem] sm:h-[40rem] md:h-auto w-full lg:w-1/3">
             <Image
               className='w-full h-full object-cover object-top md:object-center'
               src={image}
@@ -17,7 +17,7 @@ const Home: React.FC = () => {
               alt="Doris Edmund Macha"
             />
           </div>
-          <div className="md:w-2/3 p-5 sm:p-8 md:p-12 flex flex-col">
+          <div className="lg:w-2/3 p-5 sm:p-8 lg:p-12 flex flex-col">
             <h1 className="text-2xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Doris Edmund Macha
             </h1>
