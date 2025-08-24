@@ -1,7 +1,7 @@
 import { Link } from 'react-router';
 import { ArrowRight } from 'lucide-react';
 import Layout from '../../components/Layout';
-import { useEffect, useState } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Spinner } from "../../components/ui/spinner";
 import { extractH1, removeH1, slugToTitle } from '@/lib/utils';
 import MarkdownRenderer from '@/components/MarkdownRenderer';
@@ -17,9 +17,13 @@ type Research = {
     content: string;
 };
 
-const Research: React.FC = () => {
+export default function Research() {
     const [research, setResearch] = useState<Research[]>([]);
     const [loading, setLoading] = useState(true);
+
+    useLayoutEffect(() => {
+        document.title = "Research | Doris Edmund Macha"
+    }, [])
 
     useEffect(() => {
         async function loadFiles() {
@@ -89,5 +93,3 @@ const Research: React.FC = () => {
         </Layout>
     );
 };
-
-export default Research;

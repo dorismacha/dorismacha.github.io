@@ -1,6 +1,12 @@
 import Layout from "@/components/Layout";
+import { useLayoutEffect } from "react";
 
 export default function NotFound() {
+
+    useLayoutEffect(() => {
+        document.title = "404 | Page Not Found"
+    }, [])
+
     return (
         <Layout>
             <div className="text-center m-auto">

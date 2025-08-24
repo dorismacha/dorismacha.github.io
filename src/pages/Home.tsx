@@ -3,8 +3,14 @@ import Layout from '../components/Layout';
 import image from "../assets/avatar.jpg"
 import Image from "../components/Image"
 import GoogleScholar from "../assets/google-scholar.png"
+import { useLayoutEffect } from 'react';
 
-const Home: React.FC = () => {
+export default function Home() {
+
+  useLayoutEffect(() => {
+    document.title = "Doris Edmund Macha"
+  }, [])
+
   return (
     <Layout>
       <div className="bg-sidebar rounded-xl shadow-sm border border-muted overflow-hidden max-w-xl lg:max-w-7xl mx-auto">
@@ -75,5 +81,3 @@ const Home: React.FC = () => {
     </Layout>
   );
 };
-
-export default Home;

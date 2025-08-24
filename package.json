@@ -7,9 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "postbuild": "node scripts/copy404.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "postbuild": "node scripts/copy404.js",
     "lint": "eslint .",
     "preview": "vite preview"
   },

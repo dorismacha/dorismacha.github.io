@@ -30,7 +30,7 @@ const Research: React.FC = () => {
                 setContent(removeH1(md as string));
 
                 setLoading(false);
-                document.title = h1;
+                document.title = `Research | Doris Edmund Macha | ${h1}`;
             });
         } else {
             setContent("Research not found.");
