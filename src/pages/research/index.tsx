@@ -66,7 +66,7 @@ export default function Research() {
                         >
                             <div className="flex items-start justify-between">
                                 <div className="flex-1">
-                                    <h2 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                                    <h2 className="md:text-lg font-semibold text-gray-900 dark:text-white mb-2">
                                         <Link
                                             to={`/research/${research.slug}`}
                                             className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -74,7 +74,7 @@ export default function Research() {
                                             {research.title}
                                         </Link>
                                     </h2>
-                                    <div className="text-gray-700 dark:text-gray-300 my-4 leading-relaxed line-clamp-4">
+                                    <div className="text-sm text-gray-700 dark:text-gray-300 my-4 leading-relaxed line-clamp-4">
                                         <MarkdownRenderer content={research.content} />
                                     </div>
                                     <Link
