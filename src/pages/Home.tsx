@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from 'lucide-react';
+import { ExternalLink, Mail } from 'lucide-react';
 import Layout from '../components/Layout';
 import image from "../assets/avatar.jpg"
 import Image from "../components/Image"
@@ -71,7 +71,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="flex items-center space-x-1 md:space-x-2 px-2 md:px-4 py-2 bg-accent hover:bg-gray-200 dark:hover:bg-zinc-700 rounded-lg transition-colors"
               >
-                <Linkedin className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+                <ExternalLink className="h-4 w-4 text-gray-600 dark:text-gray-300" />
                 <span className="text-xs md:text-sm font-medium text-gray-700 dark:text-gray-300">LinkedIn</span>
               </a>
             </div>
