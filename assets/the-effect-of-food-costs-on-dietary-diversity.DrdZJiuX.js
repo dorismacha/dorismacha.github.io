@@ -1,4 +1,4 @@
-const e=`# The Effect of Food Costs on Dietary Diversity: Insights from Rural and Urban Households, Gender Dynamics, and Agricultural Involvement in Tanzania\r
+var e=`# The Effect of Food Costs on Dietary Diversity: Insights from Rural and Urban Households, Gender Dynamics, and Agricultural Involvement in Tanzania\r
 \r
 **MJ Chegere, DE Macha - VeriXiv, 2025**\r
 \r

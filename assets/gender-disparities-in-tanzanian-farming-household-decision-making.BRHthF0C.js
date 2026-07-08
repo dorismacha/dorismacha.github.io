@@ -1,4 +1,4 @@
-const e=`# Gender Disparities in Tanzanian Farming Household Decision-Making: Implications for Agricultural Diversity, Dietary Diversity, and Food Security
+var e=`# Gender Disparities in Tanzanian Farming Household Decision-Making: Implications for Agricultural Diversity, Dietary Diversity, and Food Security
 
 **DE Macha, MJ Chegere, I John - World Development Sustainability, 2026**
 

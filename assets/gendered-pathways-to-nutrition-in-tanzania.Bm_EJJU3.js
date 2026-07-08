@@ -1,4 +1,4 @@
-const e=`# Gendered Pathways to Nutrition in Tanzania: The Interplay of Household Dynamics and Food Affordability
+var e=`# Gendered Pathways to Nutrition in Tanzania: The Interplay of Household Dynamics and Food Affordability
 
 **DE Macha, MJ Chegere, A Munuo - VeriXiv, 2025**
 
